@@ -1,7 +1,7 @@
 # CityByte Project 2
 
 [![Test](https://github.com/rohitgeddam/CityByte/actions/workflows/django.yml/badge.svg)](https://github.com/rohitgeddam/CityByte/actions/workflows/django.yml)
-[![codecov](https://codecov.io/gh/rohitgeddam/FindMyRoomie/branch/main/graph/badge.svg?token=PCOHJETYCD)](https://codecov.io/gh/rohitgeddam/FindMyRoomie)
+[![codecov](https://codecov.io/gh/rohitgeddam/FindMyRoomie/branch/main/graph/badge.svg?token=PCOHJETYCD)](https://app.codecov.io/github/AshwiniR1802/CityByte-main)
 ![Code Size](https://img.shields.io/github/languages/code-size/SE-H-W/Project-02)
 ![Repo Size](https://img.shields.io/github/repo-size/SE-H-W/Project-02)
 [![DOI](https://zenodo.org/badge/877602165.svg)](https://doi.org/10.5281/zenodo.14027838)
