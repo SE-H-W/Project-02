@@ -22,7 +22,8 @@ Below are the new features and improvements we made:
 4. Forgot Password Feature: Improved account management with secure recovery options, ensuring smooth access to user accounts.
 5. UI Enhancements: The interface is redesigned for an intuitive, visually appealing experience, making it easier for users to navigate the platform. 
 
-#New Project
+##New Project
+Below is the video and the changes or features we added
 [<img width="1447" alt="Screenshot 2024-11-02 at 12 23 26 PM" src="https://github.com/user-attachments/assets/90a4c2b2-a7ab-4ec7-ab9d-7ac674a08c64">](https://youtu.be/an7c3hxpj3A)
 
 [<img width="1458" alt="image" src="https://github.com/user-attachments/assets/05b3aeaf-a412-4a9f-ac42-25f1ed13f26c">](https://drive.google.com/file/d/1cxWi9nhs5HRcJ6IL6EqB4kh6kklEubK8/view?usp=drive_link)
