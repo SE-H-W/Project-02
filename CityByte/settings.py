@@ -175,6 +175,7 @@ FOURSQUARE_CONFIG = {
 WEATHER_BIT_CONFIG = {
     "base_url": "https://api.weatherbit.io/v2.0/current",
     "api_key": env("WEATHER_BIT_X_RAPID_API_KEY"),
+}
 
 }
 NEWSAPI_CONFIG = {
