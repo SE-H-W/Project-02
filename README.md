@@ -16,22 +16,16 @@
 New and improved! Several new features and bug fixes were implemented to show significant improvement from Project 1.
 
 Below are the new features and improvements we made:
-1. Implemented a wish list/to-go list to save interesting locations so you can come back and look at them later :fire:
-2. Implement Caching to get API results faster :rocket:
-3. Created a signup/login page - having an account goes a long way when we add new features that are customized for the user!
-4. Comment Page - you can comment on the place and look at all the other comments that have been posted!
-5. Fixed WeatherApi Bug :bug:
-6. Implemented social media page and support contact information. 
+1. Itinerary Creation: Users can build personalized itineraries for their trips by specifying the number of travel days, making CityByte a complete travel planner.
+2. City-Specific News Page: Real-time updates on local news for each searched city, keeping users informed about events and current affairs.
+3. Google Maps Integration: Each displayed spot is clickable, opening the location directly in Google Maps in a new tab, enhancing ease of use.
+4. Forgot Password Feature: Improved account management with secure recovery options, ensuring smooth access to user accounts.
+5. UI Enhancements: The interface is redesigned for an intuitive, visually appealing experience, making it easier for users to navigate the platform. 
 
 ## Old Project - In Brief
-Below is a video of the old project:
+Below is a video of the old projects:
 
 [<img width="902" alt="image" src="https://user-images.githubusercontent.com/46688470/204404965-d3084c6c-b062-4eec-8b10-0ef95a577bd6.png">](https://drive.google.com/file/d/1FVJDir9ZufbAiUGe7AfzZvTfF7HWr58e/view?usp=sharing)
-
-
-## New Project
-Below is a video of the significant improvements we made:
-
 
 https://drive.google.com/file/d/1sUewnnTpuXX3s8nMnpnR0WZhVM-c8L1a/view?usp=sharing
 
