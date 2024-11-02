@@ -4,7 +4,7 @@
 [![codecov](https://codecov.io/gh/rohitgeddam/FindMyRoomie/branch/main/graph/badge.svg?token=PCOHJETYCD)](https://codecov.io/gh/rohitgeddam/FindMyRoomie)
 ![Code Size](https://img.shields.io/github/languages/code-size/SE-H-W/Project-02)
 ![Repo Size](https://img.shields.io/github/repo-size/SE-H-W/Project-02)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7155519.svg)](https://doi.org/10.5281/zenodo.7155519)
+[![DOI](https://zenodo.org/badge/877602165.svg)](https://doi.org/10.5281/zenodo.14027838)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![GitHub issues](https://img.shields.io/github/issues/SE-H-W/Project-02)
 ![GitHub issues-closed](https://img.shields.io/github/issues-closed/SE-H-W/Project-02)
