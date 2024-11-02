@@ -175,14 +175,13 @@ FOURSQUARE_CONFIG = {
 WEATHER_BIT_CONFIG = {
     "base_url": "https://api.weatherbit.io/v2.0/current",
     "api_key": env("WEATHER_BIT_X_RAPID_API_KEY"),
-}
 
+}
 NEWSAPI_CONFIG = {
     "base_url": "https://newsapi.org/v2",
     "api_key": env("NEWSAPI_KEY"),
 }
-
-LOGIN_REDIRECT_URL = "main_page"
+LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "login"
 # EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 CRISPY_TEMPLATE_PACK = "bootstrap"

@@ -21,13 +21,15 @@ Flask-Cors==3.0.10
 gevent==22.10.2
 geventhttpclient==2.0.8
 greenlet==3.0.0
-hiredis==2.4.0
 idna==3.4
 importlib-metadata==5.1.0
 iniconfig==1.1.1
 itsdangerous==2.1.2
 Jinja2==3.1.2
+langchain==0.3.6
+langchain-google-genai==2.0.4
 locust==2.13.1
+Markdown==3.7
 MarkupSafe==2.1.1
 mccabe==0.7.0
 msgpack==1.0.4
@@ -41,6 +43,7 @@ pyflakes==2.5.0
 pyparsing==3.0.9
 pytest==7.2.0
 pytz==2022.2.1
+pyzmq==25.1.2
 pyzmq==25.1.2
 redis==4.3.5
 requests==2.28.1
