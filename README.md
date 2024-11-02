@@ -242,20 +242,6 @@ The technologies listed below were used to build the entire project, and it is a
 
 Although we have used HTML, CSS and Bootstrap for the frontend logic the user can use any technologies and combine it with backend such as Angular, React etc.
 
-## Result
-The below screenshots give the glance of the working of our project:
-
-![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%206.png)
-![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%208.png)
-![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%209.png) 
-![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%2010.png)
-
-
-## Future Scope
-* Caching results from API using Redis in order to improve the performance.
-* Addition of search bar with category filter, that will help the user to search based on his/ her requirements.
-* To run multiple API requests simultaneously, multithreading will be used.
-
 ## Team Members
 
 ## Team Members
