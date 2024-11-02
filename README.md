@@ -22,6 +22,11 @@ Below are the new features and improvements we made:
 4. Forgot Password Feature: Improved account management with secure recovery options, ensuring smooth access to user accounts.
 5. UI Enhancements: The interface is redesigned for an intuitive, visually appealing experience, making it easier for users to navigate the platform. 
 
+#New Project
+[<img width="1447" alt="Screenshot 2024-11-02 at 12 23 26 PM" src="https://github.com/user-attachments/assets/90a4c2b2-a7ab-4ec7-ab9d-7ac674a08c64">](https://youtu.be/an7c3hxpj3A)
+
+[<img width="1458" alt="image" src="https://github.com/user-attachments/assets/05b3aeaf-a412-4a9f-ac42-25f1ed13f26c">](https://drive.google.com/file/d/1cxWi9nhs5HRcJ6IL6EqB4kh6kklEubK8/view?usp=drive_link)
+
 ## Old Project - In Brief
 Below is the old projects:
 
@@ -198,16 +203,17 @@ Concerns with the software? Please get in touch with us via one of the methods b
 
 Please contact us if you experience any problems with the program, such as problems with joining up, logging in, or any other functions.
 
-<a href = "mailto:citybyte.support@proton.me">
+<a href = "mailto:aramanu3@ncsu.edu">
 <img width = "35px" src = "https://user-images.githubusercontent.com/73664200/194786335-12b1d3a6-b272-4896-9bd7-d615e28847f3.png"/>
 </a>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href = "https://twitter.com/CityByteSupport">  
-<img width = "35px" src = "https://raw.githubusercontent.com/peterthehan/peterthehan/master/assets/twitter.svg"/>
-</a> 
+
+#Team Members
+1. Ashwini Ramanuj: aramanu3@ncsu.edu
+2. Nirmit Patel: naptel37@ncsu.edu
+3. Kahaan Patel: kaptel48@ncsu.edu
 
 # CityByte Project 1
-
 
 [![DOI](https://zenodo.org/badge/541612969.svg)](https://zenodo.org/badge/latestdoi/541612969) ![](https://img.shields.io/github/license/therealppk/CityByte) ![](https://img.shields.io/github/issues/therealppk/CityByte?style=plastic) ![](https://img.shields.io/github/issues-closed-raw/therealppk/CityByte?style=plastic) ![](https://img.shields.io/github/languages/code-size/therealppk/CityByte?style=plastic) ![](https://img.shields.io/github/contributors/therealppk/CityByte?style=plastic) [![Django CI](https://github.com/therealppk/CityByte/actions/workflows/django.yml/badge.svg)](https://github.com/therealppk/CityByte/actions/workflows/django.yml)
 [![codecov](https://codecov.io/gh/therealppk/CityByte/branch/main/graph/badge.svg?token=HRK9X7OI2J)](https://codecov.io/gh/therealppk/CityByte)
