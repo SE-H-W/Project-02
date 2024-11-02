@@ -23,16 +23,11 @@ Below are the new features and improvements we made:
 5. UI Enhancements: The interface is redesigned for an intuitive, visually appealing experience, making it easier for users to navigate the platform. 
 
 ## Old Project - In Brief
-Below is a video of the old projects:
-
-[<img width="902" alt="image" src="https://user-images.githubusercontent.com/46688470/204404965-d3084c6c-b062-4eec-8b10-0ef95a577bd6.png">](https://drive.google.com/file/d/1FVJDir9ZufbAiUGe7AfzZvTfF7HWr58e/view?usp=sharing)
+Below is the old projects:
 
 https://drive.google.com/file/d/1sUewnnTpuXX3s8nMnpnR0WZhVM-c8L1a/view?usp=sharing
 
-## Old Architecture
-![1](https://user-images.githubusercontent.com/53405794/205814769-89810a17-8ab8-4065-baf4-dfea256b9263.png)
-
-## New Architecture
+## Architecture
 ![2](https://user-images.githubusercontent.com/53405794/205814790-7c3f2cdc-59dc-47b6-92df-bddd8c5208df.png)
 
 ## Improvements
@@ -116,6 +111,7 @@ Create an account in the below websites to Fetch API keys and use them in the ab
 * [Unsplash API](https://unsplash.com/developers)
 * [Foursquare API](https://location.foursquare.com/developer/)
 * [Google Gemini API](https://ai.google.dev/gemini-api?gad_source=1&gclid=CjwKCAjw-JG5BhBZEiwAt7JR6xbYStbhA4cIvBvOPV2aUgrqJP37xjoj4M6G8qO8ltx6w85IYaCSTBoC0cYQAvD_BwE)
+* [News API](https://newsapi.org/)
 
 #### 6. Set-up REDIS
 * Follow the instructions in [Getting Started](https://redis.io/docs/getting-started/) to Install Redis in your local environment.
@@ -196,13 +192,6 @@ If you prefer using Black in VSCode, you can add the below settings in your vsco
 ## License
 Distributed under the MIT License. See `LICENSE` for more information
 
-## Team Members
-1. Rohit Geddam: sgeddam2@ncsu.edu
-2. Arun Kumar Ramesh - arames25@ncsu.edu
-3. Kiron Jayesh - kjayesh@ncsu.edu
-4. Sai Krishna Teja Varma - smanthe@ncsu.edu
-5. Shandler Mason - samason4@ncsu.edu
-
 
 ## Support
 Concerns with the software? Please get in touch with us via one of the methods below. We are delighted to address any queries you may have about the program.
@@ -254,8 +243,6 @@ The below screenshots give the glance of the working of our project:
 ![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%209.png) 
 ![](https://github.com/therealppk/CityByte/blob/main/docs/assets/City%2010.png)
 
-## Deployment:
-This project is deployed on AWS and is live at http://3.88.233.194:8000/
 
 ## Future Scope
 * Caching results from API using Redis in order to improve the performance.
@@ -264,8 +251,9 @@ This project is deployed on AWS and is live at http://3.88.233.194:8000/
 
 ## Team Members
 
-* Nirav Shah - nshah28
-* Vishwa Gandhi - vgandhi
-* Pradyumna Khawas - ppkhawas
-* Vrushanki Patel - vpatel25
-* Priya Saroj - pbsaroj
+## Team Members
+1. Rohit Geddam: sgeddam2@ncsu.edu
+2. Arun Kumar Ramesh - arames25@ncsu.edu
+3. Kiron Jayesh - kjayesh@ncsu.edu
+4. Sai Krishna Teja Varma - smanthe@ncsu.edu
+5. Shandler Mason - samason4@ncsu.edu
