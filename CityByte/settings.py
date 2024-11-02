@@ -120,7 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-
+STATICFILES_DIRS = [BASE_DIR / "static", ]
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
@@ -177,19 +177,28 @@ WEATHER_BIT_CONFIG = {
     "api_key": env("WEATHER_BIT_X_RAPID_API_KEY"),
 }
 
-}
+
+
+# Email Backend Configuration for sending password reset emails
+LOGIN_REDIRECT_URL = "main_page"
+LOGOUT_REDIRECT_URL = "login"
+#EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+CRISPY_TEMPLATE_PACK = "bootstrap"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+DEFAULT_FROM_EMAIL = 'nirmit.pce20@sot.pdpu.ac.in'
+
+
 NEWSAPI_CONFIG = {
     "base_url": "https://newsapi.org/v2",
     "api_key": env("NEWSAPI_KEY"),
 }
-LOGIN_REDIRECT_URL = "/"
-LOGOUT_REDIRECT_URL = "login"
-# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-CRISPY_TEMPLATE_PACK = "bootstrap"
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'nirmit.pce20@sot.pdpu.ac.in'
 EMAIL_HOST_PASSWORD = 'abjdkmuqcqkcwaqw'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
