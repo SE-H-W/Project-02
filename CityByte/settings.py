@@ -171,13 +171,8 @@ FOURSQUARE_CONFIG = {
 }
 
 WEATHER_BIT_CONFIG = {
-    "protocol": "https",
-    "host": "weatherbit-v1-mashape.p.rapidapi.com",
-    "port": 443,
-    "headers": {
-        "X-RapidAPI-Key": env("WEATHER_BIT_X_RAPID_API_KEY"),
-        "X-RapidAPI-Host": env("WEATHER_BIT_X_RAPID_API_HOST"),
-    },
+    "base_url": "https://api.weatherbit.io/v2.0/current",
+    "api_key": env("WEATHER_BIT_X_RAPID_API_KEY"),
 }
 
 
