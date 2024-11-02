@@ -3,10 +3,12 @@ from django.urls import path, include
 from search.views import main_page
 from info.views import info_page, profile_page, addTofav
 from .views import SignUpView
- 
+from apps.accounts.views import signup, CustomLoginView
+from . import views
 urlpatterns = [
     path("", main_page, name="main_page"),
-    path("accounts/signup/", SignUpView.as_view(), name="signup"),
+    path("accounts/signup/", signup, name="signup"),
+    path("accounts/login/", CustomLoginView.as_view(), name="login"),
     path("accounts/", include("django.contrib.auth.urls")),
     path("profile/", profile_page, name="profile_page"),
     path("city", info_page, name="info_page"),
@@ -16,4 +18,5 @@ urlpatterns = [
     ),
     path("api/info/", include(("info.urls", "info"), namespace="info")),
     path("api/addToFav/", addTofav, name="addToFav"),
+    path('city/<str:city_name>/', views.city_info, name='city_info'),
 ]
