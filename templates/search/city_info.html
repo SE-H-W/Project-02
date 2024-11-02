@@ -339,34 +339,33 @@
   </div>
   {% endif %}
 
-   <div class="container" id="comments" style="padding: 4px;">
-        <h1>Comments</h1>
-        <hr>
- 
-        <!-- add comment box -->
-        <form method="post" action="{% url 'info_page' %}?city={{ city }}&country={{country}}">
-            <!-- <textarea style="width: 100%; max-width: 100%;" id="comment" placeholder="Type your comment here"></textarea> -->
-            {% csrf_token %}
-            {{commentForm|crispy}}
-            <button class="btn btn-large btn-primary">Comment</button>
-        </form>
- 
-    {% if comments%}
- 
-        <hr>
-        <div>
-        {% for comment in comments %}
-        <div>
-            <p><b>{{comment.author.username|title}}</b></p>
-            <p>{{comment.comment}}</p>
-            <p>{{comment.created_on}}</p>
-            <hr>
-        </div>
-        {% endfor %}
-        </div>
-        {% endif %}
- 
+   
+  <div class="comment-section" id="comments">
+    <h1>Comments</h1>
+    <hr />
+    <form
+      method="post"
+      action="{% url 'info_page' %}?city={{ city }}&country={{country}}"
+      class="comment-form"
+    >
+      {% csrf_token %} {{commentForm|crispy}}
+      <button class="btn btn-primary">Comment</button>
+    </form>
+
+    {% if comments %}
+    <hr />
+    <div>
+      {% for comment in comments %}
+      <div>
+        <p><b>{{comment.author.username|title}}</b></p>
+        <p>{{comment.comment}}</p>
+        <p>{{comment.created_on}}</p>
+        <hr />
+      </div>
+      {% endfor %}
     </div>
+    {% endif %}
+  </div>
  
 </div>
  
