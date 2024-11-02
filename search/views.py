@@ -9,6 +9,11 @@ from search.utils.search import AmadeusCitySearch
 from search.utils.url import URL
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
+from django.contrib.auth.views import PasswordResetView
+from django.shortcuts import render
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain.prompts import PromptTemplate
+from langchain.chains import LLMChain
  
  
 @login_required
@@ -37,3 +42,27 @@ def city_photo(request):
             "path": photo_link,
         }
     )
+
+
+def initialize_gemini_llm():
+    api_key = 'AIzaSyCQuxhdViKd_-H1CQxEpFsgsHEolKLEN7w' 
+    if not api_key:
+        raise Exception("Gemini API Key not set. Please configure the key.")
+    my_llm = ChatGoogleGenerativeAI(model='gemini-pro', api_key=api_key)
+    return my_llm
+
+def city_info(request, city_name):
+    itinerary = None  # To store the generated itinerary
+    if request.method == 'POST':
+        
+        days = request.POST.get('days')
+        my_llm = initialize_gemini_llm()
+        my_prompt = PromptTemplate.from_template('Create an itinerary for {placename} for {num} days')
+        chain = LLMChain(llm=my_llm, prompt=my_prompt, verbose=False)
+        inputs = {'placename': city_name, 'num': days}
+        response = chain.invoke(input=inputs)
+        itinerary = response
+        return render(request, 'info/itinerary.html', {
+            'city': city_name,
+            'itinerary': itinerary
+        })
