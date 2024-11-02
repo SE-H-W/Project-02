@@ -7,14 +7,15 @@ from django.views.decorators.http import require_http_methods
 from info.helpers.places import FourSquarePlacesHelper
 from info.helpers.weather import WeatherBitHelper
 from search.helpers.photo import UnplashCityPhotoHelper
+from info.helpers.newsapi_helper import NewsAPIHelper  # Move this here
 from .models import CitySearchRecord, Comment, FavCityEntry
 from django.core.cache import cache
 from .forms import CommentForm
-
 from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.db.models import Count
+
 
 
 @login_required()
@@ -44,7 +45,7 @@ def addTofav(request):
         )
 
         data = "added"
-
+        messages.success(request, f"{city} added to favorites.")  # Add this line to set the message
     return JsonResponse({"data": data})
 
 
@@ -90,27 +91,38 @@ def info_page(request):
     if not weather_info:
         try:
             weather_info = WeatherBitHelper().get_city_weather(
-                city=city, country=country
-            )["data"][0]
+                    city=city, country=country
+                )["data"][0]
 
+            # Handle sunrise time 
+            sunrise_utc = datetime.strptime(weather_info["sunrise"], "%H:%M").replace(tzinfo=pytz.utc)
             weather_info["sunrise"] = (
-                datetime.strptime(weather_info["sunrise"], "%H:%M")
-                .astimezone(pytz.timezone(weather_info["timezone"]))
-                .strftime("%I:%M")
+                sunrise_utc.astimezone(pytz.timezone(weather_info["timezone"]))
+                .strftime("%I:%M")  # Added AM/PM format
             )
-            weather_info["sunset"] = (
-                datetime.strptime(weather_info["sunset"], "%H:%M")
-                .astimezone(pytz.timezone(weather_info["timezone"]))
-                .strftime("%I:%M")
-            )
-            weather_info["ts"] = datetime.fromtimestamp(
-                weather_info["ts"]
-            ).strftime("%m-%d-%Y, %H:%M")
 
+            # Handle sunset time
+            sunset_utc = datetime.strptime(weather_info["sunset"], "%H:%M").replace(tzinfo=pytz.utc)
+            weather_info["sunset"] = (
+                sunset_utc.astimezone(pytz.timezone(weather_info["timezone"]))
+                .strftime("%I:%M")  # Added AM/PM format
+            )
+
+            # Handle timestamp
+            weather_info["ts"] = datetime.fromtimestamp(
+                weather_info["ts"],
+                tz=pytz.utc  # Assuming the timestamp is in UTC
+            ).astimezone(pytz.timezone(weather_info["timezone"])).strftime("%m-%d-%Y, %I:%M %p")  # Added AM/PM format
+            # Cache the weather information
             cache.set(f"{city}-weather", weather_info)
         except Exception:
             weather_info = {}
-
+    # News Info
+    news_articles = cache.get(f"{city}-news")
+    if not news_articles:
+        news_articles = NewsAPIHelper().get_city_news(city_name=city)
+        cache.set(f"{city}-news", news_articles)
+        
     dining_info = cache.get(f"{city}-dinning")
     if not dining_info:
         dining_info = FourSquarePlacesHelper().get_places(
@@ -170,6 +182,9 @@ def info_page(request):
         > 0
         else False
     )
+
+
+    # Render the template with all data
     return render(
         request,
         "search/city_info.html",
@@ -185,8 +200,11 @@ def info_page(request):
             "city": city,
             "country": country,
             "isInFav": isInFav,
+            "news_articles": news_articles,  # Include news in context
         },
     )
+
+   
 
 
 @login_required()

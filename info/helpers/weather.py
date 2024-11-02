@@ -16,7 +16,13 @@ class WeatherBitHelper(CityWeatherHelperBase):
     def __init__(self, klass: WeatherUtilBase = None, url: URL = None):
         if url is None:
             klass = WeatherBit
-            url = URL(**settings.WEATHER_BIT_CONFIG)
+            # Initialize URL with required parameters: protocol, host, and port
+            url = URL(
+                protocol="https",
+                host="api.weatherbit.io",
+                port=443,
+                params={"key": settings.WEATHER_BIT_CONFIG["api_key"]}
+            )
 
         self._weather_util = klass(url=url)
 

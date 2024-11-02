@@ -22,8 +22,10 @@ class WeatherBit(WeatherUtilBase):
         params.update(kwargs)
         response = requests.request(
             "GET",
-            str(self._url.get_url(path="/current")),
+            str(self._url.get_url(path="/v2.0/current")),
             headers=self._url.with_default_headers(),
             params=params,
         )
+        response.raise_for_status()
+        print(response.json())
         return response.json()
