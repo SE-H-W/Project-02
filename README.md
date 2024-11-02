@@ -243,8 +243,6 @@ The technologies listed below were used to build the entire project, and it is a
 Although we have used HTML, CSS and Bootstrap for the frontend logic the user can use any technologies and combine it with backend such as Angular, React etc.
 
 ## Team Members
-
-## Team Members
 1. Rohit Geddam: sgeddam2@ncsu.edu
 2. Arun Kumar Ramesh - arames25@ncsu.edu
 3. Kiron Jayesh - kjayesh@ncsu.edu
