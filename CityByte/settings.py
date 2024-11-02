@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "corsheaders",
     "search",
     "info",
+    "CityByte",
 ]
 
 MIDDLEWARE = [
@@ -171,22 +172,23 @@ FOURSQUARE_CONFIG = {
 }
 
 WEATHER_BIT_CONFIG = {
-    "protocol": "https",
-    "host": "weatherbit-v1-mashape.p.rapidapi.com",
-    "port": 443,
-    "headers": {
-        "X-RapidAPI-Key": env("WEATHER_BIT_X_RAPID_API_KEY"),
-        "X-RapidAPI-Host": env("WEATHER_BIT_X_RAPID_API_HOST"),
-    },
+    "base_url": "https://api.weatherbit.io/v2.0/current",
+    "api_key": env("WEATHER_BIT_X_RAPID_API_KEY"),
 }
 
+NEWSAPI_CONFIG = {
+    "base_url": "https://newsapi.org/v2",
+    "api_key": env("NEWSAPI_KEY"),
+}
 
-LOGIN_REDIRECT_URL = "/"
-STATIC_URL = "static/"
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    "/var/www/static/",
-]
-LOGOUT_REDIRECT_URL = "/"
-
+LOGIN_REDIRECT_URL = "main_page"
+LOGOUT_REDIRECT_URL = "login"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 CRISPY_TEMPLATE_PACK = "bootstrap"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'nirmit.pce20@sot.pdpu.ac.in'
+EMAIL_HOST_PASSWORD = 'abjdkmuqcqkcwaqw'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
