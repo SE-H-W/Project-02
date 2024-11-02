@@ -223,53 +223,76 @@
  
     {% endif %}
     
- 
- 
-    <h2 style="margin: 4rem 0 1rem 1rem;">Top Rated Dining Spots</h2>
-    <div class="d-flex flex-wrap" style="margin: 1rem;">
-        {% for place in dining_info.results %}
-            <div class="card" style="width: 18rem;">
-                <img src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}" class="card-img-top" alt="{{ place.name }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ place.name }}</h5>
-                    <p class="card-text">{{ place.location.formatted_address }}</p>
-                </div>
-                <div class="card-footer">
-                    {{ place.categories.0.name }}
-                </div>
-            </div>
-        {% endfor %}
+    <h2 class="section-heading">Top Rated Dining Spots</h2>
+  <div class="d-flex flex-wrap justify-content-center" style="margin: 1rem;">
+    {% for place in dining_info.results %}
+    <div class="card" style="width: 18rem;">
+      <img
+        src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}"
+        class="card-img-top"
+        alt="{{ place.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query={{ place.name|urlencode }}+{{ weather_info.city_name|urlencode }}+{{ weather_info.state_code|urlencode }}"
+            target="_blank"
+            >{{ place.name }}</a
+          >
+        </h5>
+        <p class="card-text">{{ place.location.formatted_address }}</p>
+      </div>
+      <div class="card-footer">{{ place.categories.0.name }}</div>
     </div>
-    <h2 style="margin: 4rem 0 1rem 1rem;">Top Landmark Spots</h2>
-    <div class="d-flex flex-wrap" style="margin: 1rem;">
-        {% for place in outdoor_info.results %}
-            <div class="card" style="width: 18rem;">
-                <img src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}" class="card-img-top" alt="{{ place.name }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ place.name }}</h5>
-                    <p class="card-text">{{ place.location.formatted_address }}</p>
-                </div>
-                <div class="card-footer">
-                    {{ place.categories.0.name }}
-                </div>
-            </div>
-        {% endfor %}
+    {% endfor %}
+  </div>
+
+  <h2 class="section-heading">Top Landmark Spots</h2>
+  <div class="d-flex flex-wrap justify-content-center" style="margin: 1rem;">
+    {% for place in outdoor_info.results %}
+    <div class="card" style="width: 18rem;">
+      <img
+        src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}"
+        class="card-img-top"
+        alt="{{ place.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query={{ place.name|urlencode }}+{{ weather_info.city_name|urlencode }}+{{ weather_info.state_code|urlencode }}"
+            target="_blank"
+            >{{ place.name }}</a
+          >
+        </h5>
+        <p class="card-text">{{ place.location.formatted_address }}</p>
+      </div>
+      <div class="card-footer">{{ place.categories.0.name }}</div>
     </div>
-    <h2 style="margin: 4rem 0 1rem 1rem;">Top Arts Spots</h2>
-    <div class="d-flex flex-wrap" style="margin: 1rem;">
-        {% for place in arts_info.results %}
-            <div class="card" style="width: 18rem;">
-                <img src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}" class="card-img-top" alt="{{ place.name }}">
-                <div class="card-body">
-                    <h5 class="card-title">{{ place.name }}</h5>
-                    <p class="card-text">{{ place.location.formatted_address }}</p>
-                </div>
-                <div class="card-footer">
-                    {{ place.categories.0.name }}
-                </div>
-            </div>
-        {% endfor %}
+    {% endfor %}
+  </div>
+
+  <h2 class="section-heading">Top Arts Spots</h2>
+  <div class="d-flex flex-wrap justify-content-center" style="margin: 1rem;">
+    {% for place in arts_info.results %}
+    <div class="card" style="width: 18rem;">
+      <img
+        src="{% url 'info:place_photo' %}?fsq_id={{ place.fsq_id }}"
+        class="card-img-top"
+        alt="{{ place.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query={{ place.name|urlencode }}+{{ weather_info.city_name|urlencode }}+{{ weather_info.state_code|urlencode }}"
+            target="_blank"
+            >{{ place.name }}</a
+          >
+        </h5>
+        <p class="card-text">{{ place.location.formatted_address }}</p>
+      </div>
+      <div class="card-footer">{{ place.categories.0.name }}</div>
     </div>
+
     {% if airport_info.results %}
  
             <h2 style="margin: 4rem 0 1rem 1rem;">Airports</h2>
