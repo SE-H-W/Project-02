@@ -14,6 +14,7 @@ urlpatterns = [
     path(
         "api/search/", include(("search.urls", "search"), namespace="search")
     ),
+    path('city/<str:city_name>/', views.city_info, name='city_info'),
     path("api/info/", include(("info.urls", "info"), namespace="info")),
     path("api/addToFav/", addTofav, name="addToFav"),
 ]
