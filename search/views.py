@@ -1,3 +1,14 @@
+# from django.conf import settings
+# from django.http import JsonResponse
+# from django.shortcuts import render
+# from django.views.decorators.http import require_http_methods
+ 
+# from search.helpers.autocomplete import GenericDBSearchAutoCompleteHelper
+# from search.helpers.photo import UnplashCityPhotoHelper
+# from search.utils.search import AmadeusCitySearch
+# from search.utils.url import URL
+# from django.contrib.auth.decorators import login_required
+# from django.contrib.auth import get_user_model
 from django.conf import settings
 from django.http import JsonResponse
 from django.shortcuts import render
@@ -14,7 +25,6 @@ from django.shortcuts import render
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
- 
  
 @login_required
 @require_http_methods(["GET"])
@@ -45,16 +55,17 @@ def city_photo(request):
 
 
 def initialize_gemini_llm():
-    api_key = 'AIzaSyCQuxhdViKd_-H1CQxEpFsgsHEolKLEN7w' 
+    api_key = 'AIzaSyCQuxhdViKd_-H1CQxEpFsgsHEolKLEN7w' # Fetch the key from an environment variable
     if not api_key:
         raise Exception("Gemini API Key not set. Please configure the key.")
+    
+    # Set up the Gemini LLM
     my_llm = ChatGoogleGenerativeAI(model='gemini-pro', api_key=api_key)
     return my_llm
 
 def city_info(request, city_name):
     itinerary = None  # To store the generated itinerary
     if request.method == 'POST':
-        
         days = request.POST.get('days')
         my_llm = initialize_gemini_llm()
         my_prompt = PromptTemplate.from_template('Create an itinerary for {placename} for {num} days')
@@ -66,3 +77,4 @@ def city_info(request, city_name):
             'city': city_name,
             'itinerary': itinerary
         })
+
