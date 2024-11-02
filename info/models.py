@@ -19,6 +19,8 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"{self.city}-{self.country}-{self.author.username}"
+    class Meta:
+        unique_together = ('author', 'comment')
 
 
 class FavCityEntry(models.Model):
@@ -28,3 +30,5 @@ class FavCityEntry(models.Model):
 
     def __str__(self):
         return f"{self.city}-{self.country}-{self.user.username}"
+    class Meta:
+        unique_together = (('user', 'city', 'country'))
