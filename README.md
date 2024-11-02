@@ -64,7 +64,7 @@ Results:
 
 #### 1. Clone the repository:  
 
-   `git clone https://github.com/rohitgeddam/CityByte.git`
+   `[git clone https://github.com/rohitgeddam/CityByte.git](https://github.com/SE-H-W/Project-02.git)`
 
 #### 2. Setup the virtual environment:  
     
@@ -106,13 +106,16 @@ Results:
     FOURSQUARE_API_KEY=""
     WEATHER_BIT_X_RAPID_API_KEY=""
     WEATHER_BIT_X_RAPID_API_HOST=""
+    NEWSAPI_KEY=""
+    GOOGLE_GEMINI_API=""
 ```
 Create an account in the below websites to Fetch API keys and use them in the above template.  
 * [GeoDB Cities API](https://rapidapi.com/wirefreethought/api/geodb-cities/details)
 * [Weather API](https://rapidapi.com/weatherbit/api/weather)
 * [Amadeus API](https://developers.amadeus.com/)
 * [Unsplash API](https://unsplash.com/developers)
-* [Foursquare API](https://location.foursquare.com/developer/)  
+* [Foursquare API](https://location.foursquare.com/developer/)
+* [Google Gemini API](https://ai.google.dev/gemini-api?gad_source=1&gclid=CjwKCAjw-JG5BhBZEiwAt7JR6xbYStbhA4cIvBvOPV2aUgrqJP37xjoj4M6G8qO8ltx6w85IYaCSTBoC0cYQAvD_BwE)
 
 #### 6. Set-up REDIS
 * Follow the instructions in [Getting Started](https://redis.io/docs/getting-started/) to Install Redis in your local environment.
